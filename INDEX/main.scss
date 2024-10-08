@@ -1,0 +1,39 @@
+// Definindo variáveis
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: Helvetica, sans-serif;
+
+// Mixin para centralizar elementos
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Estilo global
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;
+  color: white;
+}
+
+// Estilizando um botão
+button {
+  background-color: $secondary-color;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+// Usando o mixin
+.container {
+  @include center-flex;
+  height: 100vh;
+}
